@@ -1,1 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>QR Code vers la page</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+</head>
+<body>
+  <h2>Scanner ce QR Code</h2>
+  <canvas id="qr"></canvas>
+
+  <script>
+    const qr = new QRious({
+      element: document.getElementById('qr'),
+      value: 'https://github.com/EntrepriseNySedra/carte/blob/main/page.html', // à adapter après déploiement
+      size: 250
+    });
+  </script>
+</body>
+</html>
 
