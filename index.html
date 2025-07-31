@@ -2,44 +2,19 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Carte Étudiant</title>
-  <style>
-    .student-card {
-      width: 300px;
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      margin: 50px auto;
-      text-align: center;
-    }
-
-    .student-card h2 {
-      margin: 10px 0;
-      font-size: 1.5em;
-      color: #2c3e50;
-    }
-
-    .student-card p {
-      margin: 5px 0;
-      font-size: 1.1em;
-    }
-
-    .label {
-      font-weight: bold;
-      color: #555;
-    }
-  </style>
+  <title>QR Code vers la page</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
 </head>
 <body>
+  <h2>Scanner ce QR Code</h2>
+  <canvas id="qr"></canvas>
 
-  <div class="student-card">
-    <h2>Details Carte Anciens</h2>
-    <p><span class="label">Nom :</span> RAVELONARIVO</p>
-    <p><span class="label">Prénom :</span> Harivola</p>
-    <p><span class="label">Promotion :</span> 2009 </p>
-  </div>
-
+  <script>
+    const qr = new QRious({
+      element: document.getElementById('qr'),
+      value: 'https://github.com/EntrepriseNySedra/carte/blob/main/page.html', // à adapter après déploiement
+      size: 250
+    });
+  </script>
 </body>
 </html>
